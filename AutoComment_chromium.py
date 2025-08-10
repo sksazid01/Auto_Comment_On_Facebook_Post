@@ -45,7 +45,7 @@ def main():
 
         # Enter credentials with human-like behavior
         m_mail.click()
-        time.sleep(random.uniform(0.5, 1))Navigate to the post
+        time.sleep(random.uniform(0.5, 1))
         human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
 
         time.sleep(random.uniform(1, 2))
@@ -104,7 +104,7 @@ def main():
                     time.sleep(random.uniform(0.5, 2))
 
                     # Type the comment with human-like speed
-                    comment = f"Mim kacchi cai ({count})"
+                    comment = f"Mim kacchi cai ({count})"   # your comment here
                     human_like_typing(comment_input, comment)
                     time.sleep(random.uniform(2, 5))
 

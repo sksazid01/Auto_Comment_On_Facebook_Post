@@ -96,7 +96,7 @@ def main():
                     comment_input.send_keys(Keys.CONTROL + "a")
                     comment_input.send_keys(Keys.DELETE)
                     time.sleep(random.uniform(0.5, 2))
-                    comment = f"Mim kacchi cai ({count})"
+                    comment = f"Mim kacchi cai ({count})" # # your comment here
                     human_like_typing(comment_input, comment)
                     time.sleep(random.uniform(2, 5))
                     comment_input.send_keys(Keys.RETURN)
@@ -119,7 +119,7 @@ def main():
                 print(f"Error in comment loop: {e}")
                 print("Might be rate limited. Waiting 5 minutes...")
                 time.sleep(300)
-        print(f"Completed posting {comments_posted} comments")
+        print(f"Completed posting {comments_posted} commen# your commentts")
     except Exception as e:
         print(f"An error occurred: {e}")
         driver.save_screenshot("error_screenshot.png")
