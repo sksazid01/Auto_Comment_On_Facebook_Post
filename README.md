@@ -23,7 +23,6 @@ An **automated commenting tool** for Facebook using Python and Selenium. Seamles
 ## Installation & Setup
 
 ### 1. Prerequisites
-
 - Python 3.6 or higher
 - pip (Python package manager)
 
@@ -36,14 +35,13 @@ pip install selenium
 ### 3. Download Chrome WebDriver
 
 - Download from [https://chromedriver.chromium.org/](https://chromedriver.chromium.org/)
-- **Ensure version matches your Chrome browser**
+- Make sure the ChromeDriver version matches your Chrome browser version.
 
 ### 4. Configure the Script
 
-- Open the Python script (`AutoComment_chrome.py` or `AutoComment_chromium.py`)
-- Enter your Facebook **Email/Phone** and **Password**
-- Add the **Facebook post URL** for auto-commenting
-- Customize your comment text
+- Open the Python script (`AutoComment_chrome.py` or `AutoComment_chromium.py`).
+- **Set the target Facebook post URL at line 66/83** in the script.
+- **Set your comment(s) at line 100/125** in the script.
 
 ### 5. Run the Bot
 
@@ -55,14 +53,18 @@ python AutoComment_chrome.py
 python AutoComment_chromium.py
 ```
 
+### 6. Facebook Login
+- After running the script, enter your Facebook **Email/Phone** and **Password** within 40 seconds (when prompted).
+
 ---
 
 ## How to Use
 
-1. **Select the target Facebook post** (copy its URL)
-2. **Set your comment(s)** in the script
-3. **Run the Python script**
-4. **Bot will auto-comment** on the given post
+1. **Copy the target Facebook post URL.**
+2. **Open the script and set your desired comment(s) and post URL** as indicated above.
+3. **Run the Python script.**
+4. **Enter your Facebook login credentials when prompted.**
+5. **The bot will automatically comment on the given post.**
 
 ---
 
@@ -72,14 +74,14 @@ python AutoComment_chromium.py
 
 ![alt text](error_screenshot.png)
 
-Common reasons:
+**Common Reasons:**
 - Facebook detects automated activity
-- Rate limiting or temporary block by Facebook
-- Network or browser-driver issues
+- Rate limiting or a temporary block by Facebook
+- Network or browser driver issues
 
 **Solutions:**
 - Wait 10-15 minutes before retrying
-- Check/update your ChromeDriver version
+- Check or update your ChromeDriver version
 - Ensure your internet connection is stable
 
 ---
@@ -95,10 +97,3 @@ This auto comment bot is for educational purposes only. Please respect Facebookâ
 `#AutoComment` `#FacebookAutomation` `#SocialMediaBot` `#PythonAutomation` `#SeleniumBot`
 
 ---
-- Provide Your account's Email/Phone No and Password
-- Run the provided python code
-
-
-## If you encounter the error below, please wait and try again later.
-![alt text](error_screenshot.png)
-

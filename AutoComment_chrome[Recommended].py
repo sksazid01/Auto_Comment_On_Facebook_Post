@@ -26,7 +26,7 @@ def main():
     )
     # Don't use chromium-only options!
 
-    count = 44
+    count = 1
     max_comments = 40  # keep this low for safety
 
     driver = webdriver.Chrome(options=chrome_options)
@@ -35,26 +35,27 @@ def main():
     )
 
     driver.get("https://www.facebook.com/login")
-    time.sleep(random.uniform(2, 4))
+    time.sleep(random.uniform(40, 50))
 
     try:
-        # Login process
-        m_mail = driver.find_element(By.CSS_SELECTOR, "input[name='email']")
-        m_pass = driver.find_element(By.CSS_SELECTOR, "input[name='pass']")
-        login = driver.find_element(By.CSS_SELECTOR, "button[name='login']")
+        # For auto insertion of Username and Password
+        # # Login process
+        # m_mail = driver.find_element(By.CSS_SELECTOR, "input[name='email']")
+        # m_pass = driver.find_element(By.CSS_SELECTOR, "input[name='pass']")
+        # login = driver.find_element(By.CSS_SELECTOR, "button[name='login']")
 
-        # Enter credentials with human-like behavior
-        m_mail.click()
-        time.sleep(random.uniform(0.5, 1))
-        human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
+        # # Enter credentials with human-like behavior
+        # m_mail.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
 
-        time.sleep(random.uniform(1, 2))
-        m_pass.click()
-        time.sleep(random.uniform(0.5, 1))
-        human_like_typing(m_pass, "?")  # Add your password here
+        # time.sleep(random.uniform(1, 2))
+        # m_pass.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_pass, "?")  # Add your password here
 
-        time.sleep(random.uniform(1, 2))
-        login.click()
+        # time.sleep(random.uniform(1, 2))
+        # login.click()
 
         # Wait for login to complete!
         print("Logging in...")
@@ -96,7 +97,7 @@ def main():
                     comment_input.send_keys(Keys.CONTROL + "a")
                     comment_input.send_keys(Keys.DELETE)
                     time.sleep(random.uniform(0.5, 2))
-                    comment = f"Mim kacchi cai ({count})" # # your comment here
+                    comment = f"Comment No: ({count})"  # # your comment here
                     human_like_typing(comment_input, comment)
                     time.sleep(random.uniform(2, 5))
                     comment_input.send_keys(Keys.RETURN)

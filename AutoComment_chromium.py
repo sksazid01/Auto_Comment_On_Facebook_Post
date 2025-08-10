@@ -26,35 +26,53 @@ def main():
     )
 
     # Initialize variables
-    count = 20
+    count = 1
     max_comments = 5  # Limit number of comments to avoid spam detection
 
-    driver = webdriver.Chrome(options=chrome_options)
+    driver = webdriver.Chrome(options=chrome_options) # # Login process
+        # m_mail = driver.find_element(By.CSS_SELECTOR, "input[name='email']")
+        # m_pass = driver.find_element(By.CSS_SELECTOR, "input[name='pass']")
+        # login = driver.find_element(By.CSS_SELECTOR, "button[name='login']")
+
+        # # Enter credentials with human-like behavior
+        # m_mail.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
+
+        # time.sleep(random.uniform(1, 2))
+        # m_pass.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_pass, "?")  # Add your password here
+
+        # time.sleep(random.uniform(1, 2))
+        # login.click()
     driver.execute_script(
         "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
     )
 
     driver.get("https://www.facebook.com/login")
-    time.sleep(random.uniform(2, 4))
+    time.sleep(random.uniform(40, 50))
 
     try:
-        # Login process
-        m_mail = driver.find_element(By.CSS_SELECTOR, "input[name='email']")
-        m_pass = driver.find_element(By.CSS_SELECTOR, "input[name='pass']")
-        login = driver.find_element(By.CSS_SELECTOR, "button[name='login']")
+        # For auto insertion of Username and Password
+        
+        # # Login process
+        # m_mail = driver.find_element(By.CSS_SELECTOR, "input[name='email']")
+        # m_pass = driver.find_element(By.CSS_SELECTOR, "input[name='pass']")
+        # login = driver.find_element(By.CSS_SELECTOR, "button[name='login']")
 
-        # Enter credentials with human-like behavior
-        m_mail.click()
-        time.sleep(random.uniform(0.5, 1))
-        human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
+        # # Enter credentials with human-like behavior
+        # m_mail.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_mail, "?")  # Replace ? with your fb account email/phone no
 
-        time.sleep(random.uniform(1, 2))
-        m_pass.click()
-        time.sleep(random.uniform(0.5, 1))
-        human_like_typing(m_pass, "?")  # Add your password here
+        # time.sleep(random.uniform(1, 2))
+        # m_pass.click()
+        # time.sleep(random.uniform(0.5, 1))
+        # human_like_typing(m_pass, "?")  # Add your password here
 
-        time.sleep(random.uniform(1, 2))
-        login.click()
+        # time.sleep(random.uniform(1, 2))
+        # login.click()
 
         # Wait for login to complete (reduced from 120)
         print("Logging in...")
@@ -104,7 +122,7 @@ def main():
                     time.sleep(random.uniform(0.5, 2))
 
                     # Type the comment with human-like speed
-                    comment = f"Mim kacchi cai ({count})"   # your comment here
+                    comment = f"Comment No: ({count})"  # your comment here
                     human_like_typing(comment_input, comment)
                     time.sleep(random.uniform(2, 5))
 
